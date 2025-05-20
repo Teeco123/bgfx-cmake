@@ -29,11 +29,11 @@ option(BX_CONFIG_DEBUG "Log debug messages (default: on in debug)" OFF)
 option(BGFX_AMALGAMATED "Amalgamated bgfx build for faster compilation" OFF)
 option(BGFX_BUILD_TOOLS "Build bgfx tools." ON)
 cmake_dependent_option(BGFX_BUILD_TOOLS_BIN2C "Build bx binary to c converter." ON BGFX_BUILD_TOOLS OFF)
-cmake_dependent_option(BGFX_BUILD_TOOLS_SHADER "Build bgfx shader tools." ON BGFX_BUILD_TOOLS OFF)
+cmake_dependent_option(BGFX_BUILD_TOOLS_SHADER "Build bgfx shader tools." ON BGFX_BUILD_TOOLS ON)
 cmake_dependent_option(BGFX_BUILD_TOOLS_GEOMETRY "Build bgfx geometry tools." ON BGFX_BUILD_TOOLS OFF)
 cmake_dependent_option(BGFX_BUILD_TOOLS_TEXTURE "Build bgfx texture tools." ON BGFX_BUILD_TOOLS OFF)
 set(BGFX_TOOLS_PREFIX "" CACHE STRING "Prefix name to add to name of tools (to avoid clashes)")
-option(BGFX_BUILD_EXAMPLES "Build bgfx examples." ON)
+option(BGFX_BUILD_EXAMPLES "Build bgfx examples." OFF)
 cmake_dependent_option(
 	BGFX_BUILD_EXAMPLE_COMMON "Build bgfx example-common project." OFF "NOT BGFX_BUILD_EXAMPLES;NOT BGFX_BUILD_TOOLS"
 	ON
